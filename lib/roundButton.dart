@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 class RoundButton extends StatelessWidget {
   final void Function() callback;
-  final String picture;
   final String label;
-  const RoundButton({Key key, this.callback, this.label, this.picture})
-      : super(key: key);
+  const RoundButton({Key key, this.callback, this.label}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +14,7 @@ class RoundButton extends StatelessWidget {
             //color: Color(0xFF3FA8E3),
             height: 100,
             shape: CircleBorder(),
-            child: Image.asset('assets/png/' + picture + '.png'),
+            child: Image.asset('assets/png/' + label + '.png'),
             onPressed: callback,
           ),
           Text(
